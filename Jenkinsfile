@@ -1,5 +1,9 @@
 pipeline{
-    agent any
+    agent {
+    docker {
+        image: "python:2.7"
+    }
+   }
     options {
             timeout(time: 1, unit: "HOURS")
             retry(3)
