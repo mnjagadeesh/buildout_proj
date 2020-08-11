@@ -11,7 +11,7 @@ pipeline{
             steps {
                   echo "Clean non git controlled files"
                   source /home/mnjagadeesh/ve3/bin/activate
-                  buildout -n
+                  /home/mnjagadeesh/ve3/bin/buildout -n
             }
         }
     }
