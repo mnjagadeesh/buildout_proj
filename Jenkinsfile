@@ -4,13 +4,13 @@ pipeline{
         stage('Build'){
             steps {
                   echo "Clean non git controlled files"
-                  git clean -fdx
+                  sh "git clean -fdx"
             }
         }
         stage('Run Buildout'){
             steps {
                   echo "Clean non git controlled files"
-                  /home/mnjagadeesh/ve3/bin/buildout -n
+                  sh "/home/mnjagadeesh/ve3/bin/buildout -n"
             }
         }
     }
