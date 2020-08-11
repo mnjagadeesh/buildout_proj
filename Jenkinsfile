@@ -1,5 +1,10 @@
 pipeline{
-    agent any
+    agent {/*...*/}
+    options {
+            timeout(time: 1, unit: "HOURS"),
+            retry(3)
+    }
+
     stages{
         stage('Build'){
             steps {
